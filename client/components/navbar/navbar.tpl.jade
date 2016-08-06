@@ -1,0 +1,10 @@
+nav
+  .nav-wrapper
+    .container
+      a.brand-logo(href="#") shareXpense
+      ul#nav-mobile.right.hide-on-med-and-down
+        each links
+          li
+            a(href="{{value}}") {{toCaps value}}
+    
+      

@@ -1,0 +1,37 @@
+$pixels:  -20 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 125 150 175 200 225 250 275 300;
+$directions: 'top' 'right' 'bottom' 'left';
+
+@each $direction in $directions {
+  @each $pixel in $pixels {
+    .margin-#{$direction}-#{$pixel} {
+      margin-#{$direction}: #{$pixel}px !important;
+    }
+
+    .padding-#{$direction}-#{$pixel} {
+      padding-#{$direction}: #{$pixel}px !important;
+    }
+  }
+}
+
+@each $pixel in $pixels {
+  .max-width-#{$pixel} {
+    max-width: #{$pixel}px !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .width-#{$i} {
+    width: 0% + $i;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.accpet {
+  background-color: $color-accept;
+  &:hover {
+    background-color: lighten($color-accept, 20%);
+  }
+}

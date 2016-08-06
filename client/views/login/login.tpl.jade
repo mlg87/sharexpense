@@ -1,0 +1,21 @@
+.container
+  .row
+    form#login-credentials.col.s12
+      h4.margin-bottom-50 {{ifElse isNewAccount 'Create Account' 'Sign In'}}
+      .row
+        each inputs
+          .input-field
+            input.validate(
+              id="{{value}}"
+              placeholder="{{placeholder}}"
+              type="{{type}}"
+              name="{{value}}"
+            )
+            label(
+              for="{{value}}"
+              class="{{value}}"
+            ) {{lowerCase value}}
+      .row
+        button.btn.btn-primary.waves-effect.waves-light.width-100(type="submit") {{ifElse isNewAccount 'Create Account' 'Sign In'}}
+      .row
+        a#signin-status.clickable {{ifElse isNewAccount 'Sign in with existing credentials' 'Create a new account'}}

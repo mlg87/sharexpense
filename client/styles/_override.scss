@@ -1,0 +1,41 @@
+nav {
+  background-color: $color-flat-navy;
+}
+
+
+// forms
+.valid {
+  border-bottom: 1px solid $color-accept !important;
+  box-shadow: 0 1px 0 0 $color-accept !important;
+}
+
+input:focus:not([readonly]) {
+  border-bottom: 1px solid $color-focus !important;
+  box-shadow: 0 1px 0 0 $color-focus !important;
+
+  + label.active {
+    color: $color-focus !important;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-primary {
+  background-color: $color-flat-royal;
+  color: white;
+  border: 1px solid $color-flat-royal;
+  border-radius: 2px;
+  &:hover, &:focus {
+    background-color: lighten($color-flat-royal, 10%);
+    border-color: lighten($color-flat-royal, 10%);
+  }
+}
+
+.normal-font-style {
+  font-style: normal;
+}
