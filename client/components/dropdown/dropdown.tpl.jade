@@ -1,0 +1,9 @@
+ul.dropdown-content(id="{{id}}")
+  each options
+    if divider
+      li.divider
+    else divider
+      li
+        a(href="{{pathFor route=value}}") {{toCaps value}}
+    else
+      li.divider

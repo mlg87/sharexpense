@@ -1,3 +1,6 @@
+UI.registerHelper 'log', (toLog, msg='LOG FROM UI') ->
+  console.log msg, toLog
+
 UI.registerHelper 'ifThen', (condition, returnValue) ->
   if condition then returnValue
 
