@@ -1,10 +1,21 @@
+ul.dropdown-content(id="test")
+  li
+    a(href="#") one
+  li
+    a(href="#") two
+  li.divider
+  li
+    a(href="#") three
 nav
   .nav-wrapper
     .container
-      a.brand-logo(href="#") shareXpense
+      a.brand-logo(href="/home") shareXpense
       ul#nav-mobile.right.hide-on-med-and-down
         each links
-          li
-            a(href="{{value}}") {{toCaps value}}
-    
-      
+          if dropdown
+            {{log this 'dropdown link option'}}
+            li
+              a.dropdown-button(data-activates="test") {{toCaps value}}
+          else
+            li
+              a(href="{{pathFor route=value}}") {{toCaps value}}

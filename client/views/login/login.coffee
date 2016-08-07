@@ -13,6 +13,7 @@ Template.login.helpers
       newAccountInputs = [
         {value: 'firstName', placeholder: @value, type: 'text'}
         {value: 'lastName', placeholder: @value, type: 'text'}
+        {value: 'email', placeholder: @value, type: 'email'}
       ]
       inputs = newAccountInputs.concat inputs
     inputs
@@ -25,4 +26,12 @@ Template.login.events
     e.preventDefault()
     form = $(e.target).serializeJSON()
 
-    
+    if inst.isNewAccount.get()
+      Meteor.call 'addUser', form, (err, res) ->
+        if err
+          sAlert.error err
+          return
+        Router.go '/home'
+    else
+      Meteor.loginWithPassword form.username, form.password, ->
+        Router.go '/home'
