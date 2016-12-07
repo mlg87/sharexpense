@@ -22,7 +22,6 @@ coffeescript@1.11.1_4
 jazzdragon:reactive-var-helper
 mquandalle:jade
 fourseven:scss
-materialize:materialize
 iron:router
 stevezhu:lodash
 accounts-ui@1.1.9
@@ -32,3 +31,4 @@ check@1.2.4
 juliancwirko:s-alert
 juliancwirko:s-alert-slide
 shell-server
+poetic:materialize-scss

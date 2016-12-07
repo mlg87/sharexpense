@@ -4,7 +4,7 @@ Template.navbar.reactiveVars
 
 Template.navbar.onCreated ->
   @autorun =>
-    $('.dropdown-button').dropdown()
+    # $('.dropdown-button').dropdown()
 
     links =
       if Meteor.user()
