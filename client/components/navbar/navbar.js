@@ -13,12 +13,14 @@ Template.navbar.onCreated(function() {
       links = Meteor.user() ? [
         {
           value: 'home'
-        }, {
+        },
+        {
           value: 'account',
           id: 'account-options',
           dropdown: true,
           options: USER_ACCOUNTS_OPTIONS
-        }, {
+        },
+        {
           value: 'search'
         }
       ] : [

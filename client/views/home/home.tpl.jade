@@ -1,2 +1,5 @@
-h5 Thanks for logging in {{signedInUser.firstName}}
-+dropdown
+if signedInUser
+  h5 Thanks for logging in {{signedInUser.firstName}}
+  +dropdown
+else
+  h5 Sup baby girl? Wanna share some expenses?
