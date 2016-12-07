@@ -1,2 +1,2 @@
-# Use lodash instead of underscore
-@_ = lodash
+# # Use lodash instead of underscore
+# @_ = lodash
