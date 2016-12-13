@@ -8,5 +8,5 @@ Meteor.publish('users', function(query, options) {
   if (this.userId == null) {
     return this.ready();
   }
-  return POS.Users.find(query, options);
+  return SE.Users.find(query, options);
 });

@@ -11,6 +11,12 @@ UI.registerHelper('ifThen', function(condition, returnValue) {
   }
 });
 
+UI.registerHelper('unlessThen', function(condition, returnValue) {
+  if (!condition) {
+    return returnValue;
+  }
+});
+
 UI.registerHelper('ifElse', function(condition, returnValue, elseValue) {
   if (condition) {
     return returnValue;
